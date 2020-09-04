@@ -27,6 +27,9 @@ This repository contains the scrips and pretrained models trained on the [ICE-AT
 
 ## 2. Setup
 
+<details>
+<summary>Click to expand</summary>
+
 ### 2.1. Create a virtual environment
 
 ```console
@@ -58,6 +61,7 @@ This will optain the ICE-ATIS dataset and place it in the root directory.
 ```console
 (venv)$ . setup.sh
 ```
+</details>
 
 ## 3. Example of Usage
 
