@@ -50,6 +50,7 @@ def test_pickle(get_data):
     save_model(trigram, file_name)
     loaded_model = load_model(file_name)
     trigram_test_tokens = ('til', 'boston', 'frá')
-    trigram_test_label = get_most_common_label(trigram_test_tokens, loaded_model)
+    trigram_test_label = get_most_common_label(
+        trigram_test_tokens, loaded_model)
 
     assert trigram_test_label == "B-toloc.city_name"

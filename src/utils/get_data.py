@@ -8,16 +8,19 @@ import operator
 from collections import defaultdict
 import pickle
 
+
 def save_model(model, file_name):
-	pickle.dump(model, open(file_name, "wb"))
+    pickle.dump(model, open(file_name, "wb"))
+
 
 def load_model(file_name):
-	try:
-		model = pickle.load(open(file_name, "rb"))
-	except FileNotFoundError:
-		print("Model not found, make sure to that the file", file_name, "exists")
-		raise
-	return model
+    try:
+        model = pickle.load(open(file_name, "rb"))
+    except FileNotFoundError:
+        print("Model not found, make sure to that the file", file_name, "exists")
+        raise
+    return model
+
 
 def clean_tokens(tokens):
     # Remove any unwanted symbols
