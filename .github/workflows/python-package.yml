@@ -41,6 +41,9 @@ jobs:
     # - name: Check documentation with pydocstyle
     #   run: |
     #     pydocstyle --ignore=D104 --match-dir='[^\.].*'
+    - name: Run setup
+      run: |
+        setup.sh
     - name: Test with pytest
       run: |
         export PYTHONPATH=src
