@@ -56,7 +56,3 @@ def Trigram(tokens, labels):
             zip(zip(tokens_before, _tokens, tokens_after), _labels))
         trigram_pairs.extend(trigram_tokens)
     return ngram_freqs(trigram_pairs)
-
-
-if __name__ == "__main__":
-    print("Scripts to us create Ngrams")

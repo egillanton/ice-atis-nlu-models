@@ -1,6 +1,6 @@
 import pytest
 from scripts.ngrams import Unigram, Bigram, Trigram
-from utils.get_data import get_ice_atis, strip_BOS_EOS_tokens, get_most_common_label
+from utils.get_data import get_ice_atis, strip_BOS_EOS_tokens, get_most_common_label, save_model, load_model
 
 
 @pytest.fixture
@@ -41,3 +41,15 @@ def test_trigram(get_data):
 
     assert trigram_test_label == "B-toloc.city_name"
 
+
+def test_pickle(get_data):
+    tokens = get_data[0]
+    labels = get_data[1]
+    trigram = Trigram(tokens, labels)
+    file_name = "models/ngram.trigram.pickle"
+    save_model(trigram, file_name)
+    loaded_model = load_model(file_name)
+    trigram_test_tokens = ('til', 'boston', 'frá')
+    trigram_test_label = get_most_common_label(trigram_test_tokens, loaded_model)
+
+    assert trigram_test_label == "B-toloc.city_name"

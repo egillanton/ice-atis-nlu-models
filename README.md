@@ -61,6 +61,13 @@ This will optain the ICE-ATIS dataset and place it in the root directory.
 
 ## 3. Example of Usage
 
+```python
+from utils.get_data import load_model, get_most_common_label
+
+trigram_model = load_model("models/ngram.trigram.pickle")
+trigram_test_tokens = ('til', 'boston', 'frá')
+trigram_test_label = get_most_common_label(trigram_test_tokens, trigram) # B-toloc.city_name
+```
 
 ## 4. Contributors
 <a href="https://github.com/egillanton/ice-atis-nlu-models/graphs/contributors">
