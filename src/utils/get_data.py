@@ -5,8 +5,6 @@ import random
 from random import sample
 from itertools import chain
 import operator
-import nltk
-from nltk import ngrams
 from collections import defaultdict
 
 
