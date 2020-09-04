@@ -43,7 +43,7 @@ jobs:
     #     pydocstyle --ignore=D104 --match-dir='[^\.].*'
     - name: Run setup
       run: |
-        setup.sh
+        if [ ! -d "ice-atis" ]; then git clone -l -s git://github.com/egillanton/ice-atis.git ice-atis > /dev/null 2>&1; fi
     - name: Test with pytest
       run: |
         export PYTHONPATH=src
