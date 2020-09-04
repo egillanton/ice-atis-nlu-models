@@ -23,6 +23,7 @@
 
 ## 1. Introduciton
 
+This repository contains the scrips and pretrained models trained on the [ICE-ATIS](https://github.com/egillanton/ice-atis) dataset.
 
 ## 2. Setup
 
